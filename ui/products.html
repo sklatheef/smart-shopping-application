@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+
+<div class="products-page">
+
+    <!-- TOP CONTROLS -->
+    <div class="top-controls">
+        <div class="logo">
+    <span class="logo-icon">🛒</span>
+    <span class="logo-text">SmartShop</span>
+</div>
+
+        <input type="text"
+               id="searchInput"
+               placeholder="Search products..."
+               onkeyup="searchProducts()">
+
+        <select id="priceFilter" onchange="filterByPrice()">
+            <option value="all">All Prices</option>
+            <option value="500">Below ₹500</option>
+            <option value="1000">Below ₹1000</option>
+            <option value="2000">Below ₹2000</option>
+        </select>
+
+        <button class="cart-btn" onclick="goToCart()">Cart</button>
+    </div>
+
+    <!-- CATEGORY BAR -->
+    <div class="category-bar">
+        <button class="active" onclick="filterProducts('all')">All</button>
+        <button onclick="filterProducts('electronics')">Electronics</button>
+        <button onclick="filterProducts('clothing')">Clothing</button>
+        <button onclick="filterProducts('food')">Food</button>
+        <button onclick="filterProducts('groceries')">Groceries</button>
+    </div>
+
+    <!-- ================= ELECTRONICS ================= -->
+    <div class="section">
+        <div class="section-header">
+            <h2>Electronics</h2>
+            <span>Top gadgets</span>
+        </div>
+
+        <div class="product-grid">
+
+            <div class="product-card electronics" data-name="laptop" data-price="55000">
+                <img src="../static/laptop.png" alt="Laptop">
+                <h3>Laptop</h3>
+                <p>₹55,000</p>
+
+                <div class="qty-row">
+                    <input type="number" class="qty" min="1" value="1">
+                    <button class="add-cart-btn"
+                            onclick="addToCartWithQty(this,'Laptop',55000)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card electronics" data-name="headphones" data-price="2000">
+                <img src="../static/headphones.png" alt="Headphones">
+                <h3>Headphones</h3>
+                <p>₹2,000</p>
+
+                <div class="qty-row">
+                    <input type="number" class="qty" min="1" value="1">
+                    <button class="add-cart-btn"
+                            onclick="addToCartWithQty(this,'Headphones',2000)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card electronics" data-name="mouse" data-price="799">
+                <img src="../static/mouse.png" alt="Mouse">
+                <h3>Mouse</h3>
+                <p>₹799</p>
+
+                <div class="qty-row">
+                    <input type="number" class="qty" min="1" value="1">
+                    <button class="add-cart-btn"
+                            onclick="addToCartWithQty(this,'Mouse',799)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card electronics" data-name="keyboard" data-price="1299">
+                <img src="../static/keyboard.png" alt="Keyboard">
+                <h3>Keyboard</h3>
+                <p>₹1,299</p>
+
+                <div class="qty-row">
+                    <input type="number" class="qty" min="1" value="1">
+                    <button class="add-cart-btn"
+                            onclick="addToCartWithQty(this,'Keyboard',1299)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card electronics" data-name="monitor" data-price="8999">
+                <img src="../static/monitor.png" alt="Monitor">
+                <h3>Monitor</h3>
+                <p>₹8,999</p>
+
+                <div class="qty-row">
+                    <input type="number" class="qty" min="1" value="1">
+                    <button class="add-cart-btn"
+                            onclick="addToCartWithQty(this,'Monitor',8999)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ================= CLOTHING ================= -->
+    <div class="section">
+        <div class="section-header">
+            <h2>Clothing</h2>
+            <span>Trending styles</span>
+        </div>
+
+        <div class="product-grid">
+
+            <div class="product-card clothing" data-name="tshirt" data-price="799">
+                <img src="../static/tshirt.png" alt="T-Shirt">
+                <h3>T-Shirt</h3>
+                <p>₹799</p>
+
+                <div class="qty-row">
+                    <input type="number" class="qty" min="1" value="1">
+                    <button class="add-cart-btn"
+                            onclick="addToCartWithQty(this,'T-Shirt',799)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card clothing" data-name="jeans" data-price="1499">
+                <img src="../static/jeans.png" alt="Jeans">
+                <h3>Jeans</h3>
+                <p>₹1,499</p>
+
+                <div class="qty-row">
+                    <input type="number" class="qty" min="1" value="1">
+                    <button class="add-cart-btn"
+                            onclick="addToCartWithQty(this,'Jeans',1499)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card clothing" data-name="shirt" data-price="999">
+                <img src="../static/shirt.png" alt="Shirt">
+                <h3>Shirt</h3>
+                <p>₹999</p>
+
+                <div class="qty-row">
+                    <input type="number" class="qty" min="1" value="1">
+                    <button class="add-cart-btn"
+                            onclick="addToCartWithQty(this,'Shirt',999)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card clothing" data-name="jacket" data-price="2499">
+                <img src="../static/jacket.png" alt="Jacket">
+                <h3>Jacket</h3>
+                <p>₹2,499</p>
+
+                <div class="qty-row">
+                    <input type="number" class="qty" min="1" value="1">
+                    <button class="add-cart-btn"
+                            onclick="addToCartWithQty(this,'Jacket',2499)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card clothing" data-name="cap" data-price="299">
+                <img src="../static/cap.png" alt="Cap">
+                <h3>Cap</h3>
+                <p>₹299</p>
+
+                <div class="qty-row">
+                    <input type="number" class="qty" min="1" value="1">
+                    <button class="add-cart-btn"
+                            onclick="addToCartWithQty(this,'Cap',299)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ================= FOOD ================= -->
+    <div class="section">
+        <div class="section-header">
+            <h2>Food</h2>
+            <span>Popular meals</span>
+        </div>
+
+        <div class="product-grid">
+
+            <div class="product-card food" data-name="pizza" data-price="299">
+                <img src="../static/pizza.png" alt="Pizza">
+                <h3>Pizza</h3>
+                <p>₹299</p>
+
+                <div class="qty-row">
+                    <input type="number" class="qty" min="1" value="1">
+                    <button class="add-cart-btn"
+                            onclick="addToCartWithQty(this,'Pizza',299)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card food" data-name="burger" data-price="149">
+                <img src="../static/burger.png" alt="Burger">
+                <h3>Burger</h3>
+                <p>₹149</p>
+
+                <div class="qty-row">
+                    <input type="number" class="qty" min="1" value="1">
+                    <button class="add-cart-btn"
+                            onclick="addToCartWithQty(this,'Burger',149)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card food" data-name="sandwich" data-price="129">
+                <img src="../static/sandwich.png" alt="Sandwich">
+                <h3>Sandwich</h3>
+                <p>₹129</p>
+
+                <div class="qty-row">
+                    <input type="number" class="qty" min="1" value="1">
+                    <button class="add-cart-btn"
+                            onclick="addToCartWithQty(this,'Sandwich',129)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card food" data-name="fries" data-price="99">
+                <img src="../static/fries.png" alt="Fries">
+                <h3>French Fries</h3>
+                <p>₹99</p>
+
+                <div class="qty-row">
+                    <input type="number" class="qty" min="1" value="1">
+                    <button class="add-cart-btn"
+                            onclick="addToCartWithQty(this,'French Fries',99)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card food" data-name="noodles" data-price="179">
+                <img src="../static/noodles.png" alt="Noodles">
+                <h3>Noodles</h3>
+                <p>₹179</p>
+
+                <div class="qty-row">
+                    <input type="number" class="qty" min="1" value="1">
+                    <button class="add-cart-btn"
+                            onclick="addToCartWithQty(this,'Noodles',179)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ================= GROCERIES ================= -->
+    <div class="section">
+        <div class="section-header">
+            <h2>Groceries</h2>
+            <span>Daily essentials</span>
+        </div>
+
+        <div class="product-grid">
+
+            <div class="product-card groceries" data-name="rice" data-price="399">
+                <img src="../static/rice.png" alt="Rice">
+                <h3>Rice (5kg)</h3>
+                <p>₹399</p>
+
+                <div class="qty-row">
+                    <input type="number" class="qty" min="1" value="1">
+                    <button class="add-cart-btn"
+                            onclick="addToCartWithQty(this,'Rice (5kg)',399)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card groceries" data-name="oil" data-price="199">
+                <img src="../static/oil.png" alt="Oil">
+                <h3>Cooking Oil</h3>
+                <p>₹199</p>
+
+                <div class="qty-row">
+                    <input type="number" class="qty" min="1" value="1">
+                    <button class="add-cart-btn"
+                            onclick="addToCartWithQty(this,'Cooking Oil',199)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card groceries" data-name="sugar" data-price="89">
+                <img src="../static/sugar.png" alt="Sugar">
+                <h3>Sugar (1kg)</h3>
+                <p>₹89</p>
+
+                <div class="qty-row">
+                    <input type="number" class="qty" min="1" value="1">
+                    <button class="add-cart-btn"
+                            onclick="addToCartWithQty(this,'Sugar (1kg)',89)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card groceries" data-name="salt" data-price="25">
+                <img src="../static/salt.png" alt="Salt">
+                <h3>Salt</h3>
+                <p>₹25</p>
+
+                <div class="qty-row">
+                    <input type="number" class="qty" min="1" value="1">
+                    <button class="add-cart-btn"
+                            onclick="addToCartWithQty(this,'Salt',25)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card groceries" data-name="dal" data-price="149">
+                <img src="../static/dal.png" alt="Dal">
+                <h3>Toor Dal</h3>
+                <p>₹149</p>
+
+                <div class="qty-row">
+                    <input type="number" class="qty" min="1" value="1">
+                    <button class="add-cart-btn"
+                            onclick="addToCartWithQty(this,'Toor Dal',149)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- NO RESULTS MESSAGE -->
+    <div id="noResults" class="no-results">
+        No products found. Try changing filters or search keywords.
+    </div>
+
+</div>
+
+<script src="../static/script.js"></script>
+
+<div id="statusMsg" class="status-msg"></div>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body class="auth-page">
+
+<div class="auth-card">
+
+    <img src="../static/login user.png" class="auth-avatar" alt="Login">
+
+    <h2>Login</h2>
+
+    <input id="username" placeholder="Username">
+    <input id="password" type="password" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+
+    <a class="auth-link" onclick="goToRegister()">Create new account</a>
+
+</div>
+
+<script src="../static/script.js"></script>
+<div id="statusMsg" class="status-msg"></div>
+
+</body>
+</html>

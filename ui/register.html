@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body class="auth-page">
+
+<div class="auth-card">
+
+    <img src="../static/login user.png" class="auth-avatar" alt="Register">
+
+    <h2>Register</h2>
+
+    <input id="username" placeholder="Username">
+    <input id="password" type="password" placeholder="Password">
+
+    <button type="button" onclick="register()">Register</button>
+
+
+    <a class="auth-link" onclick="window.location.href='login.html'">
+        Back to login
+    </a>
+
+</div>
+
+<script src="../static/script.js"></script>
+<div id="statusMsg" class="status-msg"></div>
+
+</body>
+</html>
