@@ -2,6 +2,22 @@
 
 ## Overview
 Smart Shopping Application is a prototype shopping system built using Python and SQLite. The project demonstrates how product management, cart handling, and database operations work in a basic shopping environment.
+## Application Screenshots
+
+### Login Page
+![Login Page](screenshots/login-page.jpeg)
+
+### Login Validation
+![Login Validation](screenshots/login-validation.jpeg)
+
+### Products Page
+![Products](screenshots/products-page.jpeg)
+
+### Cart Page
+![Cart](screenshots/cart-page.jpeg)
+
+### Registration Success
+![Register](screenshots/register-success.jpeg)
 
 ## Features
 - User registration and login
